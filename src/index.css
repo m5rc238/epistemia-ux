@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-paper: #FAF8F4;
+    --bg-elevated: #FFFFFF;
+    --bg-secondary: #F3EFE7;
+    --border-hairline: #E6E1D6;
+    --ink-primary: #1C1B18;
+    --ink-secondary: #57534E;
+    --ink-muted: #8A8478;
+    --accent-evidence: #0F6B6B;
+    --accent-evidence-bg: #E8F4F4;
+    --accent-assumption: #B45309;
+    --accent-assumption-bg: #FEF3C7;
+    --accent-decisive: #B91C1C;
+    --accent-decisive-bg: #FEE2E2;
+    --accent-nondecisive: #3730A3;
+    --accent-nondecisive-bg: #EEF2FF;
+    --accent-risk: #C2410C;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-paper);
+    color: var(--ink-primary);
+  }
+}
+
+.font-serif-display {
+  font-family: 'Newsreader', Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@keyframes passage-flash {
+  0% {
+    box-shadow: 0 0 0 0 rgba(15, 107, 107, 0.45);
+    background-color: #D7EFEF;
+  }
+  65% {
+    box-shadow: 0 0 0 8px rgba(15, 107, 107, 0);
+    background-color: #E8F4F4;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(15, 107, 107, 0);
+    background-color: #F4FBFB;
+  }
+}
+
+.animate-passage-flash {
+  animation: passage-flash 1.6s ease-out forwards;
+}
+
+/* Custom hairline scrollbars for side-by-side reader panes */
+.editorial-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.editorial-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.editorial-scroll::-webkit-scrollbar-thumb {
+  background: #D6D0C4;
+  border-radius: 3px;
+}
+
+.editorial-scroll::-webkit-scrollbar-thumb:hover {
+  background: #B8B0A0;
+}
